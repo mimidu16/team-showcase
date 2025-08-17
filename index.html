@@ -8,8 +8,12 @@
 
     body {
       font-family: 'DM Sans', sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       margin: 0;
-      background: transparent; /* Fond transparent */
     }
 
     .grid {
@@ -18,13 +22,12 @@
       gap: 24px;
       width: 90%;
       max-width: 1000px;
-      margin: 0 auto; /* centrer horizontalement */
     }
 
     .card {
       position: relative;
       width: 100%;
-      aspect-ratio: 3/4;
+      height: 600px; /* hauteur fixe */
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -49,18 +52,19 @@
       align-items: center;
       text-align: center;
       padding: 24px;
+      gap: 12px; /* même espace entre texte et bouton */
     }
 
     .overlay h3 {
       font-family: 'Playfair Display', serif;
       font-size: 18px;
-      margin: 0 0 6px 0; /* petit espace */
+      margin: 0;
       line-height: 1.2;
     }
 
     .overlay p {
       font-size: 16px;
-      margin: 0 0 14px 0; /* espace plus grand avant bouton */
+      margin: 0;
       line-height: 1.3;
     }
 
@@ -86,20 +90,27 @@
       position: fixed;
       z-index: 10;
       left: 0; top: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0); /* fond transparent */
       justify-content: center;
       align-items: center;
       padding: 16px;
     }
 
     .modal-content {
-      background: white;
+      background: rgba(255,255,255,0.8); /* léger fond semi-transparent */
       padding: 24px;
       border-radius: 12px;
+      width: 90%;
       max-width: 400px;
+      height: 600px; /* hauteur fixe */
       text-align: center;
       font-family: 'DM Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
     }
 
     .modal-content h2 {
@@ -195,5 +206,7 @@
   </script>
 </body>
 </html>
+
+
 
 
