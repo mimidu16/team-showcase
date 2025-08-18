@@ -66,19 +66,28 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
       color: #fff;
+    }
+
+    /* ✅ marges homogènes par défaut */
+    .overlay .content > * {
+      margin: 0;
+    }
+    .overlay .content > * + * {
+      margin-top: 12px;
+    }
+    /* ✅ espace plus grand entre le <p> et le <button> */
+    .overlay .content p + button {
+      margin-top: 20px;
     }
 
     .overlay h3 {
       font-family: "Playfair Display", serif;
       font-size: 18px;
-      margin: 0;
     }
 
     .overlay p {
       font-size: 16px;
-      margin: 0;
     }
 
     .overlay button {
@@ -209,6 +218,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
